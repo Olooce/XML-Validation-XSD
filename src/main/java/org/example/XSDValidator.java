@@ -22,6 +22,7 @@ public class XSDValidator {
         String xmlFile = "config.xml";
 
         // Full file paths
+        //Trying something
         String xsdPath = Paths.get(basePath, xsdFile).toString();
         String xmlPath = Paths.get(basePath, xmlFile).toString();
 
