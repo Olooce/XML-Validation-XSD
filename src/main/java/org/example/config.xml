@@ -1,0 +1,27 @@
+<API>
+    <CONTEXT>
+        <PORT REST="8101"/>
+        <HOST REST="0.0.0.0"/>
+        <BASE_PATH PORTAL="/portal" REST="/api/rest"/>
+        <UNDERTOW IO_THREAD_POOL="5" WORKER_THREAD_POOL="10"/>
+    </CONTEXT>
+    <DB>
+        <INITIALIZE>false</INITIALIZE>
+        <DATABASE_SERVER>MySQL</DATABASE_SERVER>
+        <HOST>192.168.90.50</HOST>
+        <PORT>3306</PORT>
+        <DATATABASE_NAME TYPE="CLEARTEXT">test_db</DATATABASE_NAME>
+        <USERNAME TYPE="CLEARTEXT">root</USERNAME>
+        <PASSWORD TYPE="CLEARTEXT">test</PASSWORD>
+        <SHOW_SQL>false</SHOW_SQL>
+        <SLING_RING>
+            <INITIAL_POOL_SIZE VALUE="5"/>
+            <MAXIMUM_POOL_SIZE VALUE="40"/>
+            <EXTRA_CONNS_SIZE VALUE="5"/>
+            <FIND_FREE_CONN_AFTER TIME_UNIT="MILLISECONDS" VALUE="1500"/>
+            <DOWNSIZE_AFTER TIME_UNIT="SECONDS" VALUE="10"/>
+            <PING_AFTER TIME_UNIT="MINUTES" VALUE="60"/>
+        </SLING_RING>
+        <BACKUP_FOLDER PATH=""/>
+    </DB>
+</API>
